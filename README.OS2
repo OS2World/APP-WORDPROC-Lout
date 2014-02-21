@@ -1,0 +1,80 @@
+Basser Lout Document Formatting System 3.36
+(C) 1994, 2007 Jeffrey H. Kingston (jeff@it.cs.usyd.edu.au)
+
+Compiled for OS/2 by Nicholas Sheppard (nps@zeta.org.au)
+http://www.zeta.org.au/~nps/software/lout/en/index.html
+
+
+Installation
+------------
+
+1. Change to the directory into which you want to install Lout and unzip the
+   lout336.zip archive in this directory, using -d if using PKZIP.
+
+2. You may want to move bin\lout.exe and bin\prg2lout.exe to a directory on
+   your path, and bin\gcc321s.dll to a directory on your library path if you
+   don't have it installed already.
+
+3. Set the LOUTLIB environment variable to point to the `lib' sub-directory of
+   the directory into which you installed Lout. If LOUTLIB is not set, Lout
+   will default to using `/programs/lout/lib', which is likely not what you
+   want. E.g. add
+
+   SET LOUTLIB=c:\programs\lout\lib
+
+   to your CONFIG.SYS if you installed Lout in c:\programs\lout.
+
+To uninstall Lout, simply delete the directory you created and delete any lines
+you added to CONFIG.SYS
+
+
+Documentation
+-------------
+
+The documentation from the original Lout distribution, compiled into PDF, is in
+the doc sub-directory:
+
+  user.pdf    Comprehensive user documentation
+  expert.pdf  Documentation for advanced users
+  slides.pdf  A brief presentation, including some simple examples
+  design.pdf  The design of Lout
+
+
+Limitations
+-----------
+
+The French and German error messages distributed with Lout are not supported.
+String collation is always done using the "C" locale.
+
+
+Source Code
+-----------
+
+The `src' sub-directory contains the patches required to build Lout using
+EMX+GCC. You will also need to obtain the original Lout source code from
+
+	ftp://ftp.it.usyd.edu.au/jeff/lout
+
+or I will send you a copy if you contact me (Nicholas Sheppard) on the
+e-mail address at the top of this file.
+
+Detailed instructions are given in src\README.EMX.
+
+
+Legal Notices
+-------------
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+

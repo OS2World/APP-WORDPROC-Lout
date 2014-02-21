@@ -1,0 +1,27 @@
+To build Lout using EMX+GCC on OS/2:
+
+1. Untar the original Lout sources.
+
+2. Copy Makefile.emx and patch-3.36-os2 into the lout-3.36 directory.
+
+2. Run `patch < patch-3.36-os2' in the lout-3.36 directory (use GNU patch, not
+   OS/2 patch).
+
+3. Edit the BINDIR, LIBDIR, DOCDIR and MANDIR lines of Makefile.emx for your
+   desired installation location. The other settings should probably be left
+   alone, though you can eliminate the need for setting LOUTLIB in the
+   environment if you set CLIBDIR appropriately at compile time.
+
+   The BINDIR directory should already exist, and the parent directories of
+   the LIBDIR, DOCDIR and MANDIR directories should already exist.
+
+4. Run `make -f Makefile.emx install'. Lout is now ready to run.
+
+5. You can also run `make -f Makefile.emx installdoc' to install the
+   documentation, then use Lout itself to compile the documentation into
+   PostScript format by running `lout all > out.ps' in each sub-directory
+   of DOCDIR. You may need to run Lout several times to resolve all of the
+   cross-references.
+
+Nicholas Sheppard (nps@zeta.org.au)
+14 November 2006

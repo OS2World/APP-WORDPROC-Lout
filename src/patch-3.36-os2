@@ -1,0 +1,17 @@
+diff -r -c ..\lout-3.34/z01.c ./z01.c
+*** ..\lout-3.34/z01.c	Fri Oct 15 02:57:00 2004
+--- ./z01.c	Sun Nov  7 11:16:42 2004
+***************
+*** 39,44 ****
+--- 39,49 ----
+  #define _setmode(fd, mode)     setmode((fd), (mode))
+  #define _fileno(stream)        fileno((stream))
+  #endif
++ #ifdef __EMX__
++ #define _O_BINARY              O_BINARY
++ #define _setmode(fd, mode)     setmode((fd), (mode))
++ #define _fileno(stream)        fileno((stream))
++ #endif
+  #endif
+  
+  /*****************************************************************************/
